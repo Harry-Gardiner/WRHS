@@ -1,0 +1,28 @@
+/*
+* Main scss file, used to pull in all sub scss files.
+* Order of import is key due to cascade. 
+*/
+
+/*
+* Normalize - resets base styles
+* 
+* Must be first import always
+*/
+@import "./normalize/normalize";
+
+/*
+* Fonts
+*/
+@import "./fonts/fonts";
+
+/*
+* Bootstrap - pulls in only the grid system from bootstrap
+* 
+* Container, Col, Row etc.
+*/
+@import "./bootstrap/bootstrap-grid.min.css";
+
+/*
+* Header 
+*/
+@import "./header/header";
