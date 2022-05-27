@@ -4,6 +4,11 @@
 */
 
 /*
+* Variables
+*/
+@import "./variables/colours";
+
+/*
 * Normalize - resets base styles
 * 
 * Must be first import always
@@ -21,6 +26,13 @@
 * Container, Col, Row etc.
 */
 @import "./bootstrap/bootstrap-grid.min.css";
+
+/*
+* Mixins
+*
+* Reusable CSS code
+*/
+@import "./mixins/mixins";
 
 /*
 * Header 

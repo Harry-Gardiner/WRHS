@@ -51,7 +51,8 @@ function wrhs_setup()
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__('Primary', 'wrhs'),
+			'meun-1' => esc_html__('Primary', 'wrhs'),
+			'mobile' => esc_html__('Mobile', 'wrhs')
 		)
 	);
 
@@ -149,6 +150,7 @@ function wrhs_scripts()
 	wp_enqueue_style('wrhs-style', get_template_directory_uri() . '/dist/css/main.css', array(), _S_VERSION);
 	// wp_style_add_data('wrhs-style', 'rtl', 'replace');
 
+	wp_enqueue_script('wrhs-navigation', get_template_directory_uri() . '/dist/js/main.js', array(), _S_VERSION);
 	wp_enqueue_script('wrhs-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

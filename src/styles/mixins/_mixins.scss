@@ -1,0 +1,21 @@
+/*
+* The @mixin directive lets you create CSS code that is to be reused throughout the website.
+*
+* The @include directive is created to let you use (include) the mixin.
+*
+* See for more info https://www.w3schools.com/sass/sass_mixin_include.php
+*/
+
+// Flex align content center axis X and Y
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Flex add space between elements
+@mixin flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

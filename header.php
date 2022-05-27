@@ -28,35 +28,67 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'wrhs'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<div class="site-branding">
+			<!-- <div class="site-branding">
 				<?php
 				the_custom_logo();
-				if (is_front_page() && is_home()) :
 				?>
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php
-				else :
-				?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php
-				endif;
-				$wrhs_description = get_bloginfo('description', 'display');
-				if ($wrhs_description || is_customize_preview()) :
-				?>
-					<p class="site-description"><?php echo $wrhs_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-												?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
+			</div> -->
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'wrhs'); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
+			<nav>
+				<div class="navbar">
+					<div class="container nav-container d-flex justify-content-between align-items-center">
+						<div class="logo d-flex align-items-center">
+							<?php
+							the_custom_logo();
+							?>
+						</div>
+						<div class="check-container d-flex align-items-center d-md-none">
+							<input class="checkbox" type="checkbox" name="" id="" />
+							<div class="hamburger-lines">
+								<span class="line line1"></span>
+								<span class="line line2"></span>
+								<span class="line line3"></span>
+							</div>
+						</div>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'primary',
+								'menu_id'        => 'primary-menu',
+								'menu_class'	=> 'menu-items d-md-flex',
+								'container_class' => 'd-none d-md-block'
+							)
+						);
+						?>
+					</div>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'mobile',
+							'menu_id'        => 'mobile-menu',
+							'menu_class'	=> 'menu-items d-md-none',
+							'container_class' => 'd-md-none'
+						)
+					);
+					?>
+				</div>
+			</nav>
+		</header>
+		<div class="title-content">
+			<?php
+			if (is_front_page() && is_home()) :
+			?>
+				<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+			<?php
+			else :
+			?>
+				<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+			<?php
+			endif;
+			$wrhs_description = get_bloginfo('description', 'display');
+			if ($wrhs_description || is_customize_preview()) :
+			?>
+				<p class="site-description"><?php echo $wrhs_description;
+											?></p>
+			<?php endif; ?>
+		</div>
