@@ -1,0 +1,14 @@
+/*
+* Default layout styling
+*/
+
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  // Forces the footer to the bottom of the page.
+  margin-top: auto;
+}
