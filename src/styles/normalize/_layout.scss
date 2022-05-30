@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-footer {
-  // Forces the footer to the bottom of the page.
-  margin-top: auto;
+main {
+  // Force footer to bottom and main takes bulk of screen content
+  flex-grow: 1;
 }
