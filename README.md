@@ -4,7 +4,12 @@
 
 This Theme is developed using [\_S](https://underscores.me/) and [Gulp WP](https://github.com/BlackbirdDigital/gulp-wp#readme).
 
-To get started with this theme clone the repo to your local /themes folder and run npm i to install all dependanices. Once instalelled you can run the local version using `npm run gulp`.
+To get started with this theme:
+
+1. clone the repo to your local /themes folder.
+2. run npm i to install all dependanices.
+3. create a .env file in the /root of the theme and add the URL of your local wp install e.g. `DEV_URL="http://yourserver-name.local/"`.
+4. run the local version using `npm run gulp`.
 
 ## Gulp WP
 
