@@ -29,7 +29,6 @@ jQuery(document).ready(function ($) {
   const navItems = $(".menu-item a");
   navItems.each(function () {
     if (this.href === activePage) {
-      console.log("hit");
       $(this).addClass("active");
     }
   });

@@ -1,0 +1,14 @@
+/*
+* Default layout styling
+*/
+
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  // Force footer to bottom and main takes bulk of screen content
+  flex-grow: 1;
+}
