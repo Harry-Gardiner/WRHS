@@ -6,14 +6,13 @@
 /*
 * Variables
 */
-@import "./variables/colours";
+@import "./variables/colours", "./variables/breakpoints", "./variables/spacing";
 
 /*
 * Normalize - resets base styles
 * 
 */
-@import "./normalize/normalize",
-"./normalize/layout";
+@import "./normalize/normalize", "./normalize/layout";
 
 /*
 * Fonts
@@ -37,5 +36,4 @@
 /*
 * Page Blocks 
 */
-@import "./header/header",
-"./footer/footer";
+@import "./header/header", "./footer/footer";
