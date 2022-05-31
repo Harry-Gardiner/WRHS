@@ -51,11 +51,11 @@
         <h2>Connect</h2>
         <div class="footer__s3__socials">
           <a href="https://www.facebook.com/groups/440186932834132/" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-instagram"></a>
+          <!-- <a href="#" class="fa fa-instagram"></a>
           <a href="#" class="fa fa-twitter"></a>
           <a href="#" class="fa fa-youtube"></a>
-          <a href="#" class="fa fa-rss"></a>
-          <a href="#" class="fa fa-envelope"></a>
+          <a href="#" class="fa fa-rss"></a> -->
+          <a href="mailto:webmaster@example.com" class="fa fa-envelope"></a>
         </div>
       </div>
 

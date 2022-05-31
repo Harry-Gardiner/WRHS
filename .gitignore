@@ -5,6 +5,9 @@
 # Sitemap files.
 /sitemap.xml
 /sitemap.xml.gz
+
+# Languages
+/languages
  
 # Files in the root.
 *.pdf
