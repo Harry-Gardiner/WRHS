@@ -4,8 +4,10 @@
 * Enqueued in functions.php 
 */
 
-body {
+body,
+button {
 	font-family: "Roboto", sans-serif;
+	color: $text-body;
 }
 
 h1,
@@ -15,4 +17,5 @@ h4,
 h5,
 h6 {
 	font-family: "Libre Baskerville", serif;
+	color: $secondary-green;
 }

@@ -1,11 +1,3 @@
-@mixin align-responsive {
-	text-align: center;
-
-	@media (min-width: $break-md) {
-		text-align: start;
-	}
-}
-
 .site-footer {
 	background-color: $text-body;
 	position: relative;
@@ -23,13 +15,13 @@
 			}
 
 			p {
-				@include align-responsive();
+				@include align-responsive;
 			}
 		}
 
 		&__s2 {
 			&__content {
-				@include align-responsive();
+				@include align-responsive;
 
 				.menu-items {
 					.menu-item {
@@ -45,7 +37,7 @@
 
 		&__s3 {
 			&__socials {
-				@include align-responsive();
+				@include align-responsive;
 
 				/* Style all font awesome icons */
 				.fa {

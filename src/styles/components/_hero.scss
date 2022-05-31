@@ -1,5 +1,10 @@
 .hero {
 	&__content {
+		@include align-responsive;
+
+		&__buttons button {
+			margin: 0.5rem 0;
+		}
 	}
 
 	&__image {

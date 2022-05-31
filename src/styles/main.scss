@@ -6,7 +6,8 @@
 /*
 * Variables
 */
-@import "./variables/colours", "./variables/breakpoints", "./variables/spacing";
+@import "./variables/colours", "./variables/breakpoints", "./variables/spacing",
+	"./variables/mixins";
 
 /*
 * Normalize - resets base styles
@@ -25,13 +26,6 @@
 * Container, Col, Row etc.
 */
 @import "./bootstrap/bootstrap-grid.min.css";
-
-/*
-* Mixins
-*
-* Reusable CSS code
-*/
-@import "./mixins/mixins";
 
 /*
 * Page Blocks 

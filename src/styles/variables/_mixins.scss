@@ -1,0 +1,13 @@
+/*
+* Sass mixins - reusable CSS
+*
+* https://sass-lang.com/documentation/at-rules/mixin
+*/
+
+@mixin align-responsive {
+	text-align: center;
+
+	@media (min-width: $break-md) {
+		text-align: start;
+	}
+}
