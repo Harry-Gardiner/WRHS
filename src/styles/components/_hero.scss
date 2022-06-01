@@ -1,0 +1,27 @@
+.hero {
+	&__content {
+		@include align-responsive;
+
+		&__buttons button {
+			margin: 0.5rem 0;
+		}
+
+		@media (min-width: $break-md) {
+			padding-right: $gap-lg;
+		}
+	}
+
+	&__image {
+		figure {
+			height: 100%;
+
+			img {
+				padding: 4px;
+				border: 2px solid $light-gray;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

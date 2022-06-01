@@ -1,0 +1,24 @@
+/*
+* Button Styles
+*/
+
+.btn {
+	border-radius: 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	border: none;
+	padding: 1rem 2.5rem;
+	border: 2px solid $primary-green;
+
+	&--primary {
+		color: $white;
+		background-color: $primary-green;
+	}
+
+	&--secondary {
+		background-color: transparent;
+		color: $primary-green;
+	}
+
+	@include hover;
+}
