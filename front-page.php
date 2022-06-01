@@ -17,6 +17,7 @@ get_header();
   <?php
 
   get_template_part('partials/blocks/block', 'hero');
+  get_template_part('partials/blocks/block', 'coloured');
 
   ?>
 

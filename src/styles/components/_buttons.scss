@@ -20,5 +20,11 @@
 		color: $primary-green;
 	}
 
+	&--tertiary {
+		background-color: transparent;
+		border-color: $white;
+		color: $white;
+	}
+
 	@include hover;
 }

@@ -32,7 +32,7 @@
 
       <div class="col-md-4 footer__s2 mb-3 d-flex flex-column align-items-center align-items-md-start">
         <div class="footer__s2__content m-md-auto">
-          <h2 class="text-center text-md-left">Sitemap</h2>
+          <h3 class="text-center text-md-left">Sitemap</h3>
 
           <?php
           wp_nav_menu(
@@ -48,7 +48,7 @@
       </div>
 
       <div class="col-md-4 footer__s3 mb-3 mb-md-5 d-flex flex-column align-items-center align-items-md-start">
-        <h2>Connect</h2>
+        <h3>Connect</h3>
         <div class="footer__s3__socials">
           <a href="https://www.facebook.com/groups/440186932834132/" class="fa fa-facebook"></a>
           <!-- <a href="#" class="fa fa-instagram"></a>
