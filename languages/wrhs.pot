@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-06-01 12:25+0000\n"
+"POT-Creation-Date: 2022-06-01 14:57+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -14,21 +14,12 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:17
+#: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
+#: 404.php:22
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr ""
-
-#: 404.php:30
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:48
-msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #. translators: 1: comment count number, 2: title.
@@ -126,11 +117,11 @@ msgstr[1] ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: single.php:23
+#: single.php:24
 msgid "Previous:"
 msgstr ""
 
-#: single.php:24
+#: single.php:25
 msgid "Next:"
 msgstr ""
 
@@ -166,11 +157,11 @@ msgstr ""
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-page.php:25, template-parts/content.php:53
+#: template-parts/content-page.php:25, template-parts/content.php:92
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:40
+#: template-parts/content.php:45
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
