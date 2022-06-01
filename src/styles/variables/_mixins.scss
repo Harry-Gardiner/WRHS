@@ -22,6 +22,20 @@
 	}
 }
 
+// Flex align content center axis X and Y
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Flex add space between elements
+@mixin flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 // Font size mixin
 @function strip-unit($value) {
 	@return $value / ($value * 0 + 1);
