@@ -5,7 +5,7 @@
         $btn_two_url = esc_url(get_sub_field('wr_hero_button_two_url'));
     ?>
 
-        <section class="hero container">
+        <section class="hero container margin">
             <div class="row">
                 <div class="col-md-6 hero__content">
                     <h1>
@@ -28,7 +28,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-6 hero__image">
+                <div class="col-md-6 hero__image mb-4">
                     <figure>
                         <?php
                         $wr_hero_image = get_sub_field('wr_hero_image');
