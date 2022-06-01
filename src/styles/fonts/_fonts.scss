@@ -7,7 +7,9 @@
 body,
 button {
 	font-family: "Roboto", sans-serif;
+	font-style: normal;
 	color: $text-body;
+	line-height: 150%;
 }
 
 h1,
@@ -19,4 +21,50 @@ h6 {
 	font-family: "Libre Baskerville", serif;
 	color: $secondary-green;
 	font-weight: initial;
+	font-style: normal;
+	line-height: 110%;
+	text-transform: capitalize;
+}
+
+/*
+* Font Sizing
+*/
+
+// Body
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 14px;
+$max_font: 18px;
+body,
+p,
+a {
+	@include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+// h1
+$h1_min_font: 40px;
+$h1_max_font: 60px;
+h1 {
+	@include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+}
+
+// h2
+$h2_min_font: 20px;
+$h2_max_font: 30px;
+h2 {
+	@include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
+}
+
+// h3
+$h3_min_font: 18px;
+$h3_max_font: 26px;
+h3 {
+	@include fluid-type($min_width, $max_width, $h3_min_font, $h3_max_font);
+}
+
+// h4
+$h4_min_font: 16px;
+$h4_max_font: 24px;
+h4 {
+	@include fluid-type($min_width, $max_width, $h4_min_font, $h4_max_font);
 }

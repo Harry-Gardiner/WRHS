@@ -5,6 +5,10 @@
 		&__buttons button {
 			margin: 0.5rem 0;
 		}
+
+		@media (min-width: $break-md) {
+			padding-right: $gap-lg;
+		}
 	}
 
 	&__image {
