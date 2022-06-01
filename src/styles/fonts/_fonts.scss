@@ -49,8 +49,8 @@ h1 {
 }
 
 // h2
-$h2_min_font: 20px;
-$h2_max_font: 30px;
+$h2_min_font: 30px;
+$h2_max_font: 45px;
 h2 {
 	@include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
 }
