@@ -42,7 +42,9 @@
 			}
 
 			li {
-				height: 40vh;
+				@media (min-width: $break-md) {
+					height: 40vh;
+				}
 				flex-grow: 1;
 				margin: 5px;
 			}
