@@ -57,7 +57,7 @@ h2 {
 }
 
 // h3
-$h3_min_font: 18px;
+$h3_min_font: 23px;
 $h3_max_font: 26px;
 h3 {
 	@include fluid-type($min_width, $max_width, $h3_min_font, $h3_max_font);

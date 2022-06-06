@@ -33,4 +33,37 @@
 			margin-left: 0.25rem;
 		}
 	}
+
+	&__item {
+		text-align: center;
+
+		@media (min-width: $break-md) {
+			text-align: start;
+		}
+
+		img {
+			width: 80%;
+			height: 220px;
+			object-fit: cover;
+		}
+
+		&__title {
+			color: $primary-green;
+		}
+
+		&__excerpt {
+			margin: 0;
+		}
+
+		&__date {
+			margin: 0;
+			font-style: italic;
+		}
+
+		&--primary {
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
