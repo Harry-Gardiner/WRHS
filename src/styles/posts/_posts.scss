@@ -1,0 +1,82 @@
+.posts {
+	&__grid {
+		&__row {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+
+			&__item {
+				flex-basis: 100%;
+				-ms-flex: auto;
+				width: 259px;
+				position: relative;
+				padding: 10px;
+				box-sizing: border-box;
+				position: relative;
+
+				@media (min-width: $break-md) {
+					flex-basis: 50%;
+				}
+
+				@media (min-width: $break-xl) {
+					flex-basis: 33.33%;
+				}
+			}
+		}
+
+		&__thumbnail {
+			height: 300px;
+			overflow: hidden;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				transition: all 300ms ease-in-out;
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		&__title {
+			position: absolute;
+			max-width: 80%;
+			bottom: 0;
+			left: 0px;
+			z-index: 10;
+			background-color: $primary-green;
+			transition: all 300ms ease-in-out;
+			opacity: 0.9;
+
+			h3 {
+				margin: 0;
+				color: $white;
+				padding: $gap-sm;
+			}
+		}
+	}
+
+	&__pagination {
+		max-width: 500px;
+
+		& a:hover {
+			text-decoration: underline;
+		}
+
+		.next {
+			display: flex;
+			svg {
+				margin-left: $gap-xs;
+			}
+		}
+
+		.prev {
+			display: flex;
+			svg {
+				margin-right: $gap-xs;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
