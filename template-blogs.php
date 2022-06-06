@@ -58,7 +58,9 @@ get_header();
                                 'base' => get_pagenum_link(1) . '%_%',
                                 'format' => 'page/%#%',
                                 'current' => $current_page,
-                                'total' => $total_pages
+                                'total' => $total_pages,
+                                'prev_text' => file_get_contents(get_template_directory_uri() . '/images/arrow.svg') . 'Previous',
+                                'next_text' => 'Next' . file_get_contents(get_template_directory_uri() . '/images/arrow.svg')
                             )); ?>
                         </div>
                     <?php }

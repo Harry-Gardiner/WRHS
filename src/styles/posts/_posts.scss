@@ -59,5 +59,24 @@
 
 	&__pagination {
 		max-width: 500px;
+
+		& a:hover {
+			text-decoration: underline;
+		}
+
+		.next {
+			display: flex;
+			svg {
+				margin-left: $gap-xs;
+			}
+		}
+
+		.prev {
+			display: flex;
+			svg {
+				margin-right: $gap-xs;
+				transform: rotate(180deg);
+			}
+		}
 	}
 }
