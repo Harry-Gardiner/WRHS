@@ -22,26 +22,26 @@ get_header();
                 array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 8,
+                    'posts_per_page' => 9,
                     'paged' => $paged
                 )
             ); ?>
 
-            <div class="posts-section">
+            <div class="posts__grid">
                 <?php if ($posts_query->have_posts()) { ?>
-                    <h2><?php echo esc_html__('Our latest work', 'wrhs'); ?></h2>
-                    <div class="archived-posts">
+                    <!-- <h2><?php echo esc_html__('Our latest work', 'wrhs'); ?></h2> -->
+                    <div class="posts__grid__row">
                         <?php while ($posts_query->have_posts()) {
                             $posts_query->the_post(); ?>
-                            <div class="archive-item">
+                            <div class="posts__grid__row__item">
                                 <?php if (has_post_thumbnail(get_the_ID())) { ?>
-                                    <div class="post-thumbnail">
+                                    <div class="posts__grid__thumbnail">
                                         <a href="<?php the_permalink(); ?>">
                                             <?php the_post_thumbnail(); ?>
                                         </a>
                                     </div>
                                 <?php } ?>
-                                <div class="post-title">
+                                <div class="posts__grid__title">
                                     <a href="<?php the_permalink(); ?>">
                                         <h3><?php the_title(); ?></h3>
                                     </a>
@@ -49,6 +49,7 @@ get_header();
                             </div>
                         <?php } ?>
                     </div>
+
                     <?php
                     $total_pages = $posts_query->max_num_pages;
                     if ($total_pages > 1) {
