@@ -29,7 +29,7 @@ get_header();
 
             <div class="posts__grid">
                 <?php if ($posts_query->have_posts()) { ?>
-                    <div class="posts__grid__row mb-3">
+                    <div class="posts__grid__row mb-5">
                         <?php while ($posts_query->have_posts()) {
                             $posts_query->the_post(); ?>
                             <div class="posts__grid__row__item">
@@ -53,7 +53,7 @@ get_header();
                     $total_pages = $posts_query->max_num_pages;
                     if ($total_pages > 1) {
                         $current_page = max(1, get_query_var('paged')); ?>
-                        <div class="posts__pagination d-flex justify-content-evenly m-auto">
+                        <div class="posts__pagination d-flex justify-content-evenly margin">
                             <?php echo paginate_links(array(
                                 'base' => get_pagenum_link(1) . '%_%',
                                 'format' => 'page/%#%',
