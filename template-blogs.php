@@ -29,8 +29,7 @@ get_header();
 
             <div class="posts__grid">
                 <?php if ($posts_query->have_posts()) { ?>
-                    <!-- <h2><?php echo esc_html__('Our latest work', 'wrhs'); ?></h2> -->
-                    <div class="posts__grid__row">
+                    <div class="posts__grid__row mb-3">
                         <?php while ($posts_query->have_posts()) {
                             $posts_query->the_post(); ?>
                             <div class="posts__grid__row__item">
@@ -54,7 +53,7 @@ get_header();
                     $total_pages = $posts_query->max_num_pages;
                     if ($total_pages > 1) {
                         $current_page = max(1, get_query_var('paged')); ?>
-                        <div class="archive-pagination">
+                        <div class="posts__pagination d-flex justify-content-evenly m-auto">
                             <?php echo paginate_links(array(
                                 'base' => get_pagenum_link(1) . '%_%',
                                 'format' => 'page/%#%',
@@ -65,7 +64,7 @@ get_header();
                     <?php }
                     wp_reset_postdata();
                 } else { ?>
-                    <div class="archived-posts"><?php echo esc_html__('No posts matching the query were found.', 'wrhs'); ?></div>
+                    <div class="posts"><?php echo esc_html__('No posts matching the query were found.', 'wrhs'); ?></div>
                 <?php } ?>
             </div>
 </main>
