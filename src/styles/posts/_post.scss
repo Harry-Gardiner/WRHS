@@ -10,6 +10,19 @@
 		}
 	}
 
+	.entry-meta {
+		background-color: $primary-green;
+		color: $white;
+
+		.posted-on {
+			padding-left: $gap-xs;
+		}
+
+		a {
+			color: white;
+		}
+	}
+
 	.post-thumbnail {
 		text-align: center;
 
