@@ -1,0 +1,36 @@
+.featured {
+	&__link {
+		overflow: hidden;
+		text-align: center;
+		padding-left: $gap-xs;
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		&:before {
+			background-color: $primary-green;
+			content: "";
+			display: inline-block;
+			height: 2px;
+			position: relative;
+			vertical-align: middle;
+			width: 20vw;
+			max-width: 150px;
+			right: 0.5em;
+		}
+
+		span {
+			transition: margin-left 300ms ease-in-out;
+		}
+
+		&:hover > span {
+			margin-left: 1.5rem;
+		}
+
+		svg {
+			display: flex;
+			margin-left: 0.25rem;
+		}
+	}
+}

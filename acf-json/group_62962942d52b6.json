@@ -1,6 +1,6 @@
 {
     "key": "group_62962942d52b6",
-    "title": "Front Page Hero",
+    "title": "Block - Hero",
     "fields": [
         {
             "key": "field_6296294b583c0",
@@ -230,5 +230,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654011297
+    "modified": 1654524863
 }

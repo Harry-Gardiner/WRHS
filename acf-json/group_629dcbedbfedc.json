@@ -1,6 +1,6 @@
 {
     "key": "group_629dcbedbfedc",
-    "title": "Blog",
+    "title": "Blog page - message",
     "fields": [
         {
             "key": "field_629dcbf30deea",
@@ -38,5 +38,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654508697
+    "modified": 1654523477
 }

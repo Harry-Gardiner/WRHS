@@ -64,6 +64,13 @@
 			text-decoration: underline;
 		}
 
+		.next,
+		.prev {
+			text-transform: capitalize;
+			font-weight: bold;
+			align-items: center;
+		}
+
 		.next {
 			display: flex;
 			svg {
