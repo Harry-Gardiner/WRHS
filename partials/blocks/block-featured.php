@@ -37,7 +37,7 @@
     <a href="<?php echo esc_url($wr_featured_url); ?>" class="featured__link mb-4">View all <?php echo $display_type ?> <span><?php echo file_get_contents(get_template_directory_uri() . '/images/arrow.svg'); ?></span></a>
 
     <div class="row">
-        <div class="featured__item featured__item--primary col-md-5 mb-4">
+        <div class="featured__item featured__item--primary col-lg-7 mb-4">
             <?php
             if ($wr_featured_primary) :
                 $primary = $wr_featured_primary;
@@ -52,25 +52,33 @@
 
             <?php endif; ?>
         </div>
-        <div class="col-md-7">
-            <div class="featured__item featured__item--alt">
+        <div class="col-lg-4">
+            <div class="featured__item featured__secondary mb-4">
                 <?php
                 if ($wr_featured_secondary) :
                     $secondary = $wr_featured_secondary;
-
                 ?>
-                    <a href="<?php the_permalink($secondary); ?>">
-                        <?php echo get_the_post_thumbnail($secondary) ?>
-                        <h3 class="featured__item__title mb-2"><?php echo get_the_title($secondary); ?></h3>
-                    </a>
-                    <p class="featured__item__excerpt mb-2"><?php echo get_the_excerpt($secondary) ?></p>
-                    <p class="featured__item__date"><?php echo get_the_date('d M Y', $secondary) ?></p>
-
+                    <?php get_template_part('/partials/common/featured', 'card', array($secondary)) ?>
                 <?php endif; ?>
             </div>
-            <div class="featured__tertiary">S3</div>
-            <div class="featured__quaternary">S4</div>
+            <div class="featured__item featured__tertiary mb-4">
+                <?php
+                if ($wr_featured_tertiary) :
+                    $tertiary = $wr_featured_tertiary;
+                ?>
+                    <?php get_template_part('./partials/common/featured', 'card', array($tertiary)) ?>
+                <?php endif; ?>
+            </div>
+            <div class="featured__item featured__quaternary mb-4">
+                <?php
+                if ($wr_featured_quaternary) :
+                    $quaternary = $wr_featured_quaternary;
+                ?>
+                    <?php get_template_part('./partials/common/featured', 'card', array($quaternary)) ?>
+                <?php endif; ?>
+            </div>
         </div>
+    </div>
     </div>
 
 
