@@ -188,3 +188,12 @@ if (defined('JETPACK__VERSION')) {
 if (class_exists('WooCommerce')) {
   require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Custom excerpt length
+ */
+function custom_excerpt_length($length)
+{
+  return 20;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
