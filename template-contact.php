@@ -2,7 +2,7 @@
 /* Template Name: Custom Contact */
 get_header();
 ?>
-<main id="main" class="contact container margin">
+<main id="main" class="contact container">
     <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
     <?php the_content() ?>
 
