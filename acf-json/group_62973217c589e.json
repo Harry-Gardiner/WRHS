@@ -201,6 +201,13 @@
                 "operator": "!=",
                 "value": "111"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "151"
+            }
         ]
     ],
     "menu_order": 2,
@@ -214,5 +221,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654524879
+    "modified": 1654599643
 }

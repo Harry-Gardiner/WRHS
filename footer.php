@@ -55,7 +55,7 @@
           <a href="#" class="fa fa-twitter"></a>
           <a href="#" class="fa fa-youtube"></a>
           <a href="#" class="fa fa-rss"></a> -->
-          <a href="mailto:webmaster@example.com" class="fa fa-envelope"></a>
+          <a href="mailto:enquiries@wrhs.org.uk" class="fa fa-envelope"></a>
         </div>
       </div>
 
