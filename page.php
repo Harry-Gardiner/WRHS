@@ -32,6 +32,11 @@ get_header();
 	endwhile; // End of the loop.
 	?>
 
+	<?php
+	get_template_part('partials/blocks/block', 'coloured');
+	get_template_part('partials/blocks/block', 'featured');
+	?>
+
 </main><!-- #main -->
 
 <?php
