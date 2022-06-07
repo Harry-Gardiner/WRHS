@@ -1,0 +1,21 @@
+.wpcf7 {
+	margin: $gap-md auto;
+	background-color: $secondary-green;
+	padding: $gap-sm $gap-md;
+	color: $white;
+	border-radius: 10px;
+
+	input,
+	textarea {
+		width: 100%;
+
+		&:focus,
+		&:focus-visible {
+			outline: 2px solid $light-gray;
+		}
+	}
+
+	input[type="submit"] {
+		width: fit-content;
+	}
+}
