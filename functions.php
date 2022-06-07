@@ -190,10 +190,36 @@ if (class_exists('WooCommerce')) {
 }
 
 /**
- * Custom excerpt length
+ * Custom excerpt length.
  */
 function custom_excerpt_length($length)
 {
   return 20;
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+/**
+ * WP Event Manager Plugin
+ * 
+ * Set banner image to thumbnail image if banner image is not set.
+ */
+add_filter('event_manager_default_event_banner', 'your_theme_slug_default_event_banner');
+function your_theme_slug_default_event_banner($image_path)
+{
+
+  $image_path = get_the_post_thumbnail_url();
+
+  return $image_path;
+}
+
+/**
+ * WP Event Manager Plugin
+ * 
+ * Remove register button. 
+ */
+function registration_disable($method, $post)
+{
+  return false;
+}
+add_filter('display_event_registration_method', 'registration_disable', 90, 2);
+add_filter('get_event_registration_method', 'registration_disable', 90, 2);

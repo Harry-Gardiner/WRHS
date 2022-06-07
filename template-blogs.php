@@ -2,7 +2,7 @@
 /* Template Name: Custom Archive Template */
 get_header();
 ?>
-<main id="main" class="posts container margin">
+<main id="main" class="posts container">
     <?php if (have_posts()) {
         while (have_posts()) {
             the_post(); ?>

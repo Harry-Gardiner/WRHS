@@ -13,6 +13,7 @@
 				padding: 10px;
 				box-sizing: border-box;
 				position: relative;
+				border-radius: 4px;
 
 				@media (min-width: $break-md) {
 					flex-basis: 50%;
@@ -27,6 +28,7 @@
 		&__thumbnail {
 			height: 300px;
 			overflow: hidden;
+			border-radius: 4px;
 
 			img {
 				height: 100%;
@@ -48,6 +50,7 @@
 			background-color: $primary-green;
 			transition: all 300ms ease-in-out;
 			opacity: 0.9;
+			border-radius: 4px;
 
 			h3 {
 				margin: 0;

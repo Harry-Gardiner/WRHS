@@ -19,7 +19,7 @@ get_header();
 		</header><!-- .page-header -->
 
 		<div class="page-content">
-			<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wrhs'); ?></p>
+			<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below?', 'wrhs'); ?></p>
 
 			<div class="archive-sidebar">
 				<div class="archive-categories">
@@ -33,10 +33,10 @@ get_header();
 						); ?>
 					</ul>
 				</div>
-				<div class="archive-tags">
+				<!-- <div class="archive-tags">
 					<p><strong><?php echo esc_html__('Tags', 'wrhs'); ?></strong></p>
 					<?php wp_tag_cloud(); ?>
-				</div>
+				</div> -->
 				<div class="archive-authors">
 					<p><strong><?php echo esc_html__('Authors', 'wrhs'); ?></strong></p>
 					<?php wp_list_authors(

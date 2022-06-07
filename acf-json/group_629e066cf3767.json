@@ -3,13 +3,45 @@
     "title": "Block - Featured",
     "fields": [
         {
+            "key": "field_629f734af2392",
+            "label": "Display featured block?",
+            "name": "wr_display_featured_block",
+            "type": "radio",
+            "instructions": "Choose to hide or display the featured block.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hide": "Hide",
+                "display": "Display"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "hide",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_629e06f9287b6",
             "label": "Select featured content",
             "name": "wr_featured_type",
             "type": "select",
             "instructions": "Select type of content to display e.g. blog(posts), events, news.",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629f734af2392",
+                        "operator": "==",
+                        "value": "display"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -199,12 +231,12 @@
                         "id": ""
                     },
                     "post_type": [
-                        "post"
+                        "event_listing"
                     ],
                     "taxonomy": "",
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "ui": 1
                 },
                 {
@@ -221,12 +253,12 @@
                         "id": ""
                     },
                     "post_type": [
-                        "post"
+                        "event_listing"
                     ],
                     "taxonomy": "",
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "ui": 1
                 },
                 {
@@ -243,12 +275,12 @@
                         "id": ""
                     },
                     "post_type": [
-                        "post"
+                        "event_listing"
                     ],
                     "taxonomy": "",
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "ui": 1
                 },
                 {
@@ -265,7 +297,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "post"
+                        "event_listing"
                     ],
                     "taxonomy": "",
                     "allow_null": 0,
@@ -403,11 +435,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654599899
+    "modified": 1654617001
 }

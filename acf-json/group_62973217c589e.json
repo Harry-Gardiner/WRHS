@@ -3,13 +3,45 @@
     "title": "Block - Coloured",
     "fields": [
         {
+            "key": "field_629f723686b64",
+            "label": "Display Component?",
+            "name": "wr_display_coloured_block",
+            "type": "radio",
+            "instructions": "Display or hide the coloured component. This component adds a section to the site with a dark green background.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hide": "Hide",
+                "display": "Display"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "hide",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_62973279bc9af",
             "label": "",
             "name": "wr_coloured_block",
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629f723686b64",
+                        "operator": "==",
+                        "value": "display"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -208,11 +240,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654599940
+    "modified": 1654616830
 }
