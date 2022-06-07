@@ -194,6 +194,6 @@ if (class_exists('WooCommerce')) {
  */
 function custom_excerpt_length($length)
 {
-  return 30;
+  return 20;
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);

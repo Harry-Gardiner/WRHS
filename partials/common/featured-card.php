@@ -2,7 +2,7 @@
 The $args value is the post ID, which is then used to display the posts information. -->
 
 <div class="featured__item featured__item--alt row">
-    <a class="col-md-4" href="<?php the_permalink($args[0]); ?>">
+    <a class="col-md-5" href="<?php the_permalink($args[0]); ?>">
         <?php echo get_the_post_thumbnail($args[0]) ?>
     </a>
     <div class="col-md-7">
