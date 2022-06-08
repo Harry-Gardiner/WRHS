@@ -31,6 +31,7 @@ jQuery(document).ready(function ($) {
 	/*
 	 * Video resize
 	 */
+
 	// Find all YouTube videos
 	// Expand that selector for Vimeo and whatever else
 	var $allVideos = $("iframe[src^='//www.youtube.com']"),
