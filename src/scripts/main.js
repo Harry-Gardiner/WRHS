@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
 
 	// Find all YouTube videos
 	// Expand that selector for Vimeo and whatever else
-	var $allVideos = $("iframe[src^='//www.youtube.com']"),
+	var $allVideos = $("iframe"),
 		// The element that is fluid width
 		$fluidEl = $("body");
 
