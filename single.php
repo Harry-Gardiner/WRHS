@@ -23,6 +23,7 @@ get_header();
 			array(
 				'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'wrhs') . '</span> <span class="nav-title">%title</span>',
 				'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'wrhs') . '</span> <span class="nav-title">%title</span>',
+				'excluded_terms' => (current_user_can('upload_files') ? null : 53)
 			)
 		);
 
