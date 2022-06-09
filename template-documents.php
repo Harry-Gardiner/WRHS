@@ -6,7 +6,7 @@ get_header();
     <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
     <?php the_content() ?>
 
-    <h2>Magazines</h2>
+    <h2 class="underline">Magazines</h2>
     <?php
     $args = array(
         'posts_per_page' => -1,
@@ -33,7 +33,7 @@ get_header();
     ?>
 
 
-    <h2>Other</h2>
+    <h2 class="underline">Other</h2>
     <?php
     $args = array(
         'posts_per_page' => -1,
@@ -45,13 +45,15 @@ get_header();
     $loop = new WP_Query($args);
     ?>
 
-    <?php if ($loop->have_posts()) :
-        while ($loop->have_posts()) : $loop->the_post(); ?>
-            Docs
-        <?php endwhile;
-    else : ?>
-        <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
-    <?php endif; ?>
+    <section class="pdfs">
+        <?php if ($loop->have_posts()) :
+            while ($loop->have_posts()) : $loop->the_post(); ?>
+                <?php get_template_part('partials/common/featured', 'pdf') ?>
+            <?php endwhile;
+        else : ?>
+            <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php endif; ?>
+    </section>
 
     <?php
     wp_reset_postdata();

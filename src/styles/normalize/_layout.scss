@@ -3,12 +3,24 @@
 */
 
 #page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 main {
-  // Force footer to bottom and main takes bulk of screen content
-  flex-grow: 1;
+	// Force footer to bottom and main takes bulk of screen content
+	flex-grow: 1;
+}
+
+.underline {
+	&::after {
+		background: none repeat scroll 0 0 $secondary-green;
+		bottom: -10px;
+		content: "";
+		display: block;
+		height: 2px;
+		position: relative;
+		width: 100px;
+	}
 }
