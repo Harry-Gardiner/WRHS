@@ -12,7 +12,14 @@ function wrhs_register_custom_post()
      */
     $labels = array(
         'name'          => 'WRHS Documents', // Plural name
-        'singular_name' => 'Document'   // Singular name
+        'singular_name' => 'Document',   // Singular name
+        'add_new' => __('Add New'),
+        'add_new_item' => __('Add New Document'),
+        'edit' => __('Edit'),
+        'edit_item' => __('Edit Document'),
+        'new_item' => __('New Document'),
+        'view' => __('View Document'),
+        'view_item' => __('View Document'),
     );
 
     /*
@@ -20,7 +27,7 @@ function wrhs_register_custom_post()
      */
     $supports = array(
         'title',        // Post title
-        'editor',       // Post content
+        // 'editor',       // Post content
         'excerpt',      // Allows short description
         'author',       // Allows showing and choosing author
         'thumbnail',    // Allows feature images

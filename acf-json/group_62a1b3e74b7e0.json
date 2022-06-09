@@ -1,0 +1,44 @@
+{
+    "key": "group_62a1b3e74b7e0",
+    "title": "CPT - documents",
+    "fields": [
+        {
+            "key": "field_62a1b3f763705",
+            "label": "Add document",
+            "name": "wr_add_document",
+            "type": "file",
+            "instructions": "Add the PDF file. \r\n\r\nSet its category as either 1. Magazine or 2. Generic Document. \r\n\r\nSetting this category will correctly filter the documents.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "document"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1654764684
+}
