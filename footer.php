@@ -57,6 +57,9 @@
           <a href="#" class="fa fa-rss"></a> -->
           <a href="mailto:enquiries@wrhs.org.uk" class="fa fa-envelope"></a>
         </div>
+        <br>
+        <h3>Members</h3>
+        <a href="<?php echo wp_login_url() ?>">Login In</a>
       </div>
 
     </div>

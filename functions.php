@@ -227,3 +227,24 @@ function registration_disable($method, $post)
 }
 add_filter('display_event_registration_method', 'registration_disable', 90, 2);
 add_filter('get_event_registration_method', 'registration_disable', 90, 2);
+
+/**
+ * Rework WP login page
+ */
+function my_login_logo_url()
+{
+  return home_url();
+}
+add_filter('login_headerurl', 'my_login_logo_url');
+
+function my_login_logo_url_title()
+{
+  return 'Your Site Name and Info';
+}
+add_filter('login_headertext', 'my_login_logo_url_title');
+
+function my_login_logo()
+{
+  wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/style-login.css');
+}
+add_action('login_enqueue_scripts', 'my_login_logo');
