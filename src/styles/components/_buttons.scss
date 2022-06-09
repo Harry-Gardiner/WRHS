@@ -36,3 +36,16 @@
 
 	@include hover;
 }
+
+.submit {
+	border-radius: 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	border: none;
+	padding: 1rem 2.5rem;
+	border: 2px solid $primary-green;
+	color: $white;
+	background-color: $primary-green;
+
+	@include hover;
+}
