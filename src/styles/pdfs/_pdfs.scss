@@ -1,7 +1,23 @@
-.pdf {
-	&__viewer {
-		max-width: 800px;
-		// display: flex;
-		// justify-content: center;
+.pdfs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: $gap-md 0;
+
+	&__card {
+		width: 200px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&__title {
+			color: $primary-green;
+		}
+
+		&__image {
+			max-width: 100px;
+			max-height: 200px;
+			object-fit: cover;
+		}
 	}
 }
