@@ -176,6 +176,10 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Register WHRS Custom Post Type 
+ */
+require get_template_directory() . '/inc/register-cpt.php';
+/**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {

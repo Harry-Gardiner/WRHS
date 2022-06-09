@@ -1,0 +1,32 @@
+.pdfs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: $gap-md 0;
+
+	&__card {
+		width: 200px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&__link {
+			transition: box-shadow 300ms ease-in-out;
+			&:hover {
+				box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+				border-radius: 10px;
+			}
+		}
+
+		&__title {
+			color: $primary-green;
+		}
+
+		&__image {
+			max-width: 100px;
+			max-height: 200px;
+			object-fit: cover;
+		}
+	}
+}
