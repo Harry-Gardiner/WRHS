@@ -13,7 +13,7 @@ get_header();
     ?>
 
         <h2 class="underline">Protected Documents</h2>
-        <small class="info">These downloads are only visible to logged in users with 'Author' role or greater</small>
+        <small class="info mb-4">Protected documents are only visible to logged in users with 'Author' role or greater</small>
         <?php
         $args = array(
             'posts_per_page' => -1,
