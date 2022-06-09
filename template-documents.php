@@ -45,7 +45,7 @@ get_header();
     $loop = new WP_Query($args);
     ?>
 
-    <section class="pdfs">
+    <section class="pdfs mb-5">
         <?php if ($loop->have_posts()) :
             while ($loop->have_posts()) : $loop->the_post(); ?>
                 <?php get_template_part('partials/common/featured', 'pdf') ?>

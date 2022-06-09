@@ -11,6 +11,14 @@
 		flex-direction: column;
 		justify-content: space-between;
 
+		&__link {
+			transition: box-shadow 300ms ease-in-out;
+			&:hover {
+				box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+				border-radius: 10px;
+			}
+		}
+
 		&__title {
 			color: $primary-green;
 		}
