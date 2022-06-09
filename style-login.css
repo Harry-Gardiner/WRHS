@@ -1,0 +1,46 @@
+#login h1 a,
+.login h1 a {
+  background-image: url(./images/WRHSlogoMin.png);
+  height: 65px;
+  width: 320px;
+  background-size: 320px 65px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 30px;
+}
+
+#loginform {
+    background-color: #343d33;
+    border-radius: 10px;
+    color: white;
+}
+
+.wp-core-ui .button-primary {
+    background-color: #2e6e3c !important;
+    border-color: #2e6e3c !important;
+}
+
+.login form .input:focus {
+    border-color: #2e6e3c;
+    box-shadow: 0 0 0 1px #2e6e3c;
+    outline: 2px solid transparent;
+}
+
+.wp-core-ui .button-primary:focus {
+    background: #2e6e3c;
+    border-color: gray;
+    color: whtie;
+    box-shadow: 0 0 0 1px gray;
+    outline: 2px solid transparent;
+    outline-offset: 0;
+}
+
+.dashicons-visibility:before {
+    color: #2e6e3c;
+}
+
+.login input[type=checkbox]:focus {
+    border-color: #2e6e3c;
+    box-shadow: 0 0 0 1px #2e6e3c;
+    outline: 2px solid transparent;
+}
