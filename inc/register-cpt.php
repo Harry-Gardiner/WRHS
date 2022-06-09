@@ -39,7 +39,7 @@ function wrhs_register_custom_post()
      */
     $args = array(
         'labels'              => $labels,
-        'description'         => 'custom post type for WRHS documents, inc magazine and other docs', // Description
+        'description'         => 'WHRS magazine and documents.', // Description
         'supports'            => $supports,
         'taxonomies'          => array('category'), // Allowed taxonomies
         'hierarchical'        => false, // Allows hierarchical categorization, if set to false, the Custom Post Type will behave like Post, else it will behave like Page

@@ -26,5 +26,12 @@
 		color: $white;
 	}
 
+	&--download {
+		background-color: transparent;
+		color: $primary-green;
+		border-radius: 10px;
+		font-weight: bold;
+	}
+
 	@include hover;
 }
