@@ -512,6 +512,7 @@ table {
 --------------------------------------------- */
 a {
 	color: $primary-green;
+	outline: 0;
 }
 
 a:visited {
@@ -525,7 +526,7 @@ a:active {
 }
 
 a:focus {
-	outline: thin dotted;
+	outline: 0;
 }
 
 a:hover,

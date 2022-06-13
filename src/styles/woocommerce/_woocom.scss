@@ -13,8 +13,9 @@
 			width: 250px !important;
 			margin: 0;
 			text-align: center;
-			padding: $gap-sm;
+			// padding: $gap-sm;
 			border-radius: 4px;
+			border: 1px solid #c4c4c4;
 			transition: box-shadow 0.3s;
 
 			&:hover {
@@ -30,6 +31,7 @@
 
 				h3 {
 					color: $primary-green;
+					padding: 0 $gap-xs;
 				}
 			}
 
@@ -38,11 +40,48 @@
 			}
 
 			img {
-				width: 100px;
-				height: 100px;
+				// width: 100px;
+				// height: 100px;
+				// object-fit: cover;
+				// padding: 4px;
+				// border: 2px solid #c4c4c4;
+
+				// If images are greater than 100x100px
+				height: 200px;
+				width: 250px;
 				object-fit: cover;
-				padding: 4px;
-				border: 2px solid #c4c4c4;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				position: relative;
+			}
+
+			.price,
+			.read_more {
+				color: $text-body;
+			}
+
+			.read_more {
+				margin-bottom: $gap-xs;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.woocommerce-pagination {
+		margin-top: $gap-sm;
+		margin-bottom: $gap-sm;
+		@media (min-width: $break-sm) {
+			margin-top: $gap-md;
+			margin-bottom: $gap-md;
+		}
+
+		.page-numbers {
+			display: flex;
+			justify-content: center;
+			li {
+				padding: 0 $gap-sm;
 			}
 		}
 	}

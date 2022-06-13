@@ -276,9 +276,9 @@ function wr_read_more()
 }
 
 // Woo Price 
-add_filter('woocommerce_get_price_html',  'change_product_price_html', 10, 2);
+add_filter('woocommerce_get_price_html',  'wr_change_product_price_html', 10, 2);
 
-function change_product_price_html($price_html, $product)
+function wr_change_product_price_html($price_html, $product)
 {
 	global $post;
 	$id = !empty($product->get_id()) ? $product->get_id() : $post->ID;
@@ -288,5 +288,7 @@ function change_product_price_html($price_html, $product)
 
 	$price_html = ($regular_price == '') ? $sale_price : $regular_price;
 
-	return $price_html;
+	$price_output = ($price_html == null) ? 'price tbc' : '£' . $price_html;
+
+	return $price_output;
 }
