@@ -232,7 +232,7 @@ if (!function_exists('wrhs_woocommerce_header_cart')) {
 				?>
 			</li>
 		</ul>
-<?php
+	<?php
 	}
 }
 
@@ -292,3 +292,17 @@ function wr_change_product_price_html($price_html, $product)
 
 	return $price_output;
 }
+
+// Category title - remove original h4 and replace with p tags
+remove_action('woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10, 2);
+function woocommerce_template_loop_category_title_override($category)
+{ ?>
+	<p class="woocommerce-loop-category__title">
+		<?php
+		echo esc_html($category->name); //Update your title which you want to update here
+		if ($category->count > 0) {
+			echo apply_filters('woocommerce_subcategory_count_html', ' <mark class="count">(' . esc_html($category->count) . ')</mark>', $category);
+		} ?>
+	</p><?php
+	}
+	add_action('woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title_override', 10);

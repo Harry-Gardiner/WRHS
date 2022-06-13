@@ -45,7 +45,9 @@ do_action('woocommerce_before_main_content');
 	do_action('woocommerce_archive_description');
 	?>
 </header>
+<!-- <h3>Categories</h3> -->
 <?php
+dynamic_sidebar('product_cat');
 if (woocommerce_product_loop()) {
 
 	/**

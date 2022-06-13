@@ -6,7 +6,7 @@
 		padding-top: $gap-sm;
 		gap: $gap-sm;
 
-		.product {
+		.product.type-product {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -55,13 +55,14 @@
 				position: relative;
 			}
 
-			.price,
-			.read_more {
+			.price {
 				color: $text-body;
 			}
 
 			.read_more {
+				color: $primary-green;
 				margin-bottom: $gap-xs;
+				flex-grow: 1;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -82,6 +83,18 @@
 			justify-content: center;
 			li {
 				padding: 0 $gap-sm;
+			}
+		}
+	}
+
+	.product-categories {
+		ul {
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+
+			li {
+				padding: $gap-xs $gap-sm;
 			}
 		}
 	}
