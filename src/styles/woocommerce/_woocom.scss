@@ -1,0 +1,49 @@
+.woocom {
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding-top: $gap-sm;
+		gap: $gap-sm;
+
+		.product {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 250px !important;
+			margin: 0;
+			text-align: center;
+			padding: $gap-sm;
+			border-radius: 4px;
+			transition: box-shadow 0.3s;
+
+			&:hover {
+				box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+			}
+
+			& > a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+
+				h3 {
+					color: $primary-green;
+				}
+			}
+
+			p {
+				color: $text-body;
+			}
+
+			img {
+				width: 100px;
+				height: 100px;
+				object-fit: cover;
+				padding: 4px;
+				border: 2px solid #c4c4c4;
+			}
+		}
+	}
+}
