@@ -19,7 +19,7 @@
 defined('ABSPATH') || exit;
 
 get_header('shop');
-echo '<div class="woocom container margin">';
+echo '<div class="woocom container mb-4 mb-md-5">';
 /**
  * Hook: woocommerce_before_main_content.
  *
