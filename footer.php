@@ -27,7 +27,9 @@
           the_custom_logo();
           ?>
         </div>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, est ratione! Beatae minus corrupti reiciendis cum in tempore, nemo vel! Suscipit natus temporibus est nemo.</p>
+        <h3><strong>Opening times:</strong></h3>
+        <p>Wednesdays from 2pm to 4pm</p>
+        <p>Saturdays from 9:30am to 12:30pm</p>
       </div>
 
       <div class="col-md-4 footer__s2 mb-3 d-flex flex-column align-items-center align-items-md-start">

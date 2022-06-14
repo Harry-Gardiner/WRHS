@@ -104,4 +104,8 @@
 	background-color: $primary-green;
 	color: $white;
 	border-color: $primary-green;
+
+	&:active {
+		color: $white;
+	}
 }
