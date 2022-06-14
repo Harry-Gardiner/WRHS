@@ -257,3 +257,17 @@ function my_login_logo()
   wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/style-login.css');
 }
 add_action('login_enqueue_scripts', 'my_login_logo');
+
+// Function to output SVG into text where file content would throw error
+// function url_get_contents($url)
+// {
+//   if (!function_exists('curl_init')) {
+//     die('CURL is not installed!');
+//   }
+//   $ch = curl_init();
+//   curl_setopt($ch, CURLOPT_URL, $url);
+//   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//   $output = curl_exec($ch);
+//   curl_close($ch);
+//   return $output;
+// }
