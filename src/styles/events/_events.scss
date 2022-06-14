@@ -1,53 +1,53 @@
+.wpem-main {
+	color: $text-body;
+
+	.wpem-single-event-wrapper {
+		border: 1px solid $secondary-green !important;
+	}
+
+	.wpem-heading-text,
+	.wpem-date {
+		color: $secondary-green !important;
+	}
+
+	.wpem-event-type-text {
+		color: $primary-green !important;
+	}
+
+	.wpem-event-layout-icon.wpem-active-layout {
+		background-color: $primary-green !important;
+	}
+
+	.wpem-single-event-sidebar-info {
+		margin-bottom: $gap-sm;
+	}
+
+	.wpem-single-event-left-content {
+		&:after {
+			background: $secondary-green !important;
+		}
+	}
+
+	.wpem-social-icon {
+		a {
+			line-height: 0;
+			font-size: 0;
+			color: transparent;
+		}
+
+		&.wpem-xing {
+			display: none !important;
+		}
+	}
+}
+
+.load_more_events {
+	background-color: $primary-green !important;
+	color: $white !important;
+
+	@include hover;
+}
+
 .event_listings {
 	margin-bottom: $gap-md;
-
-	.wpem-main {
-		color: $text-body;
-
-		.wpem-single-event-wrapper {
-			border: 1px solid $secondary-green !important;
-		}
-
-		.wpem-heading-text,
-		.wpem-date {
-			color: $secondary-green !important;
-		}
-
-		.wpem-event-type-text {
-			color: $primary-green !important;
-		}
-
-		.wpem-event-layout-icon.wpem-active-layout {
-			background-color: $primary-green !important;
-		}
-
-		.wpem-single-event-sidebar-info {
-			margin-bottom: $gap-sm;
-		}
-
-		.wpem-single-event-left-content {
-			&:after {
-				background: $secondary-green !important;
-			}
-		}
-
-		.wpem-social-icon {
-			a {
-				line-height: 0;
-				font-size: 0;
-				color: transparent;
-			}
-
-			&.wpem-xing {
-				display: none !important;
-			}
-		}
-	}
-
-	.load_more_events {
-		background-color: $primary-green !important;
-		color: $white !important;
-
-		@include hover;
-	}
 }
