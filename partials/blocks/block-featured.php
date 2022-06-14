@@ -1,4 +1,5 @@
-<?php if (get_field('wr_display_featured_block') === 'display') : ?>
+<?php
+if (get_field('wr_display_featured_block') === 'display') : ?>
     <?php if (get_field('wr_featured_type') === 'post') : ?>
         <?php if (have_rows('wr_featured_posts')) : ?>
             <?php while (have_rows('wr_featured_posts')) :
@@ -47,15 +48,15 @@
         <?php endif; ?>
     <?php endif; ?>
 
-    <?php if (get_field('wr_featured_type') === 'news') : ?>
-
-    <?php endif; ?>
-
     <section class="featured container margin">
         <h2>
             WHRS <?php echo $display_type ?>
         </h2>
-        <a href="<?php echo esc_url($wr_featured_url); ?>" class="featured__link mb-4">View all <?php echo $display_type ?> <span><?php echo file_get_contents(get_template_directory_uri() . '/images/arrow.svg'); ?></span></a>
+        <a href="<?php echo esc_url($wr_featured_url); ?>" class="featured__link mb-4">View all <?php echo $display_type ?> <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="#2E6E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 5L19 12L12 19" stroke="#2E6E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </span></a>
 
         <div class="row">
             <div class="featured__item featured__item--primary col-lg-6 mb-4 row">
