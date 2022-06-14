@@ -246,9 +246,17 @@ function wr_hide_sale_flash()
 	return false;
 }
 
+// Add stock level to products list 
+add_action('woocommerce_product_meta_start', 'wr_show_stock_shop', 10);
+function wr_show_stock_shop()
+{
+	global $product;
+	echo wc_get_stock_html($product);
+}
+
 // Remove add to basket functionality
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart');
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 40);
 
 // Remove breadcrumbs
 
@@ -308,6 +316,13 @@ function wr_change_product_price_html($price_html, $product)
 
 	return $price_output;
 }
+
+// Remove zoom icon from product. Required so I can center the item. 
+function remove_image_zoom_support()
+{
+	remove_theme_support('wc-product-gallery-zoom');
+}
+add_action('wp', 'remove_image_zoom_support', 100);
 
 // Category title - remove original h4 and replace with p tags
 remove_action('woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10, 2);
