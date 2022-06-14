@@ -290,9 +290,19 @@ function wr_change_product_price_html($price_html, $product)
 	$regular_price = get_post_meta($id, '_regular_price', true);
 	$sale_price = get_post_meta($id, '_sale_price', true);
 
-	$price_html = ($regular_price == '') ? $sale_price : $regular_price;
+	if (!empty($regular_price) && !empty($sale_price)) {
+		$price_html = 'RRP: £' . $regular_price . ' ' . '<br><strong>Our Price: £' . $sale_price . '</strong>';
+	}
 
-	$price_output = ($price_html == null) ? 'price tbc' : '£' . $price_html;
+	if (empty($regular_price) && !empty($sale_price)) {
+		$price_html = '<strong>Our Price: £' . $sale_price . '</strong>';
+	}
+
+	if (!empty($regular_price) && empty($sale_price)) {
+		$price_html = '<strong>Our Price: £' . $regular_price . '</strong>';
+	}
+
+	$price_output = ($price_html == null) ? 'Price tbc' : $price_html;
 
 	return $price_output;
 }
