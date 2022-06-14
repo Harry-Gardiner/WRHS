@@ -13,11 +13,6 @@
 ?>
 
 <footer id="colophon" class="site-footer gap">
-  <!-- SUDO
-      Mob - 1 row
-      Desk - 3 columns
-      Sections - logo with text, site map, connect
-    -->
   <div class="footer container padding">
     <div class="row d-flex flex-column align-items-center flex-md-row align-items-md-start">
 
@@ -27,9 +22,7 @@
           the_custom_logo();
           ?>
         </div>
-        <h3><strong>Opening times:</strong></h3>
-        <p>Wednesdays from 2pm to 4pm</p>
-        <p>Saturdays from 9:30am to 12:30pm</p>
+        <?php dynamic_sidebar('footer_open_hours'); ?>
       </div>
 
       <div class="col-md-4 footer__s2 mb-3 d-flex flex-column align-items-center align-items-md-start">
