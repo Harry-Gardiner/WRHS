@@ -136,6 +136,15 @@ function wrhs_widgets_init()
       'after_title'   => '</h2>',
     )
   );
+  register_sidebar(
+    array(
+      'name'          => 'Product Categories',
+      'id'            => 'product_cat',
+      'description'   => 'Goes at the top of the products page.',
+      'before_widget' => '<section id="%1$s" class="widget %2$s product-categories">',
+      'after_widget'  => '</section>',
+    )
+  );
 }
 add_action('widgets_init', 'wrhs_widgets_init');
 

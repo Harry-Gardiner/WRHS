@@ -10,6 +10,11 @@
 			color: $white;
 		}
 
+		a,
+		p {
+			font-weight: normal;
+		}
+
 		&__s1 {
 			.logo {
 				width: 75px;
