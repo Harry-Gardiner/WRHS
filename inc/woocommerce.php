@@ -236,6 +236,8 @@ if (!function_exists('wrhs_woocommerce_header_cart')) {
 	}
 }
 
+// Make all products unpurchasable 
+add_filter('woocommerce_is_purchasable', '__return_false');
 
 // Remove sale tag 
 add_filter('woocommerce_sale_flash', 'wr_hide_sale_flash');
@@ -246,7 +248,7 @@ function wr_hide_sale_flash()
 
 // Remove add to basket functionality
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 20);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart');
 
 // Remove breadcrumbs
 
