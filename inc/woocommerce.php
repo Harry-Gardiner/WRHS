@@ -302,7 +302,7 @@ function wr_change_product_price_html($price_html, $product)
 		$price_html = '<strong>Our Price: £' . $regular_price . '</strong>';
 	}
 
-	$price_output = ($price_html == null) ? 'Price tbc' : $price_html;
+	$price_output = ($price_html == null) ? '<i>Price tbc</i>' : $price_html;
 
 	return $price_output;
 }
