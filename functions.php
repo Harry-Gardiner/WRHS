@@ -145,6 +145,15 @@ function wrhs_widgets_init()
       'after_widget'  => '</section>',
     )
   );
+  register_sidebar(
+    array(
+      'name'          => 'Footer Open Hours',
+      'id'            => 'footer_open_hours',
+      'description'   => 'Open hours to display in footer',
+      'before_widget' => '<div id="%1$s" class="widget %2$s footer-open-hours">',
+      'after_widget'  => '</div>',
+    )
+  );
 }
 add_action('widgets_init', 'wrhs_widgets_init');
 
