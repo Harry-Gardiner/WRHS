@@ -2,7 +2,15 @@
 	color: $text-body;
 
 	.wpem-single-event-wrapper {
-		border: 1px solid $secondary-green !important;
+		border: 3px solid $secondary-green !important;
+	}
+
+	.wpem-single-event-left-content::after {
+		width: 3px !important;
+	}
+
+	.wpem-event-organizer {
+		display: none !important;
 	}
 
 	.wpem-heading-text,
@@ -25,6 +33,13 @@
 	.wpem-single-event-left-content {
 		&:after {
 			background: $secondary-green !important;
+		}
+	}
+
+	.wpem-event-single-image {
+		img {
+			max-height: 60vh;
+			object-fit: cover;
 		}
 	}
 
