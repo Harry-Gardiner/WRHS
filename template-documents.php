@@ -39,6 +39,7 @@ get_header();
         wp_reset_query();
         ?>
 
+        <hr class="hr-gray">
     <?php endif; // end of user capability check 
     ?>
 
@@ -68,6 +69,7 @@ get_header();
     wp_reset_query();
     ?>
 
+    <hr class="hr-gray">
 
     <h2 class="underline">Other</h2>
     <?php

@@ -54,7 +54,11 @@
         </div>
         <br>
         <h3>Members</h3>
-        <a href="<?php echo wp_login_url() ?>">Login In</a>
+        <?php if (is_user_logged_in()) : ?>
+          <a href="<?php echo wp_login_url() ?>">Logout</a>
+        <?php else : ?>
+          <a href="<?php echo wp_login_url() ?>">Login</a>
+        <?php endif; ?>
       </div>
 
     </div>
