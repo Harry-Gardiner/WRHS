@@ -15,10 +15,12 @@ get_header();
                     the_row(); ?>
 
                     <?php if ($wr_address = get_sub_field('wr_address')) : ?>
+                        <h3>Address:</h3>
                         <?php echo $wr_address; ?>
                     <?php endif; ?>
 
                     <?php if ($wr_opening_hours = get_sub_field('wr_opening_hours')) : ?>
+                        <h3>Opening Hours:</h3>
                         <?php echo $wr_opening_hours; ?>
                     <?php endif; ?>
 
