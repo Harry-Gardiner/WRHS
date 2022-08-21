@@ -109,8 +109,7 @@
 					font-size: 1.2rem;
 
 					&:hover {
-						font-weight: bolder;
-						// border-bottom: 2px solid $white;
+						border-bottom: 2px solid $white;
 					}
 
 					&.active {
@@ -124,11 +123,9 @@
 	.menu-items {
 		li a {
 			font-weight: normal;
-			transition: all 0.2s ease-in-out;
 
 			&:hover {
-				// font-weight: bolder;
-				color: $primary-green;
+				border-bottom: 2px solid $secondary-green;
 			}
 		}
 	}
