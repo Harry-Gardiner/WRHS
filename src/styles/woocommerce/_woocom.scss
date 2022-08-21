@@ -74,6 +74,12 @@
 			justify-content: center;
 			li {
 				padding: 0 $gap-sm;
+
+				.page-numbers:not(.current) {
+					&:hover {
+						border-bottom: 2px solid $primary-green;
+					}
+				}
 			}
 		}
 	}
