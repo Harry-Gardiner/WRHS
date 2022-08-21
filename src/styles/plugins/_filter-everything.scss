@@ -1,0 +1,8 @@
+.wpfButton {
+	background-color: $primary-green;
+	color: $white;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
