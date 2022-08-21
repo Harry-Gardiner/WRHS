@@ -2,7 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: $gap-md 0;
+	gap: $gap-md $gap-sm;
 
 	&__card {
 		width: 200px;
