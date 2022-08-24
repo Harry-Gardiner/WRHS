@@ -9,9 +9,7 @@
 
             <!-- <h1 class="posts__title"><?php echo esc_html(get_the_title()); ?></h1> -->
             <div class="posts__section">
-                <div class="posts__content" style="display: flex;
-    flex-direction: column;
-    align-items: center;">
+                <div class="posts__content" style="display: flex; flex-direction: column; align-items: center;">
                     <?php the_content(); ?>
                 </div>
         <?php }
