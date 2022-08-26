@@ -1,50 +1,130 @@
 <?php
 if (get_field('wr_display_featured_block') === 'display') : ?>
-    <?php if (get_field('wr_featured_type') === 'post') : ?>
-        <?php if (have_rows('wr_featured_posts')) : ?>
-            <?php while (have_rows('wr_featured_posts')) :
-                the_row(); ?>
 
-                <?php
-                $type = 'post';
-                $display_type = 'blogs';
+    <?php if (get_field('wr_auto_fill')) : ?>
+        <?php if (get_field('wr_featured_type') === 'post') : ?>
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 4,
+                'orderby' => 'date',
+                'order' => 'DESC',
+            );
+            $loop = new WP_Query($args);
+            $postArr = $loop->posts;
 
-                $wr_featured_primary = get_sub_field('wr_featured_posts_primary_feature');
+            $type = 'post';
+            $display_type = 'blogs';
 
-                $wr_featured_secondary = get_sub_field('wr_featured_posts_secondary_feature');
+            if (count($postArr) > 0) {
+                $wr_featured_primary = $postArr[0];
+            }
 
-                $wr_featured_tertiary = get_sub_field('wr_featured_posts_tertiary_feature');
 
-                $wr_featured_quaternary = get_sub_field('wr_featured_posts_quaternary_feature');
+            if (count($postArr) > 1) {
+                $wr_featured_secondary = $postArr[1];
+            }
 
-                $wr_featured_url = get_sub_field('wr_featured_url');
-                ?>
+            if (count($postArr) > 2) {
+                $wr_featured_tertiary = $postArr[2];
+            }
 
-            <?php endwhile; ?>
+            if (count($postArr) > 3) {
+                $wr_featured_quaternary = $postArr[3];
+            }
+
+            $wr_featured_url = get_sub_field('wr_featured_url');
+
+            ?>
         <?php endif; ?>
-    <?php endif; ?>
 
-    <?php if (get_field('wr_featured_type') === 'events') : ?>
-        <?php if (have_rows('wr_featured_events')) : ?>
-            <?php while (have_rows('wr_featured_events')) :
-                the_row(); ?>
+        <?php if (get_field('wr_featured_type') === 'events') : ?>
+            <?php
+            $args = array(
+                'post_type' => 'event_listing',
+                'post_status' => 'publish',
+                'posts_per_page' => 4,
+                'orderby' => 'date',
+                'order' => 'ASC',
+            );
+            $loop = new WP_Query($args);
+            $postArr = $loop->posts;
+            $type = 'post';
+            $display_type = 'blogs';
 
-                <?php
-                $type = 'event';
-                $display_type = 'events';
+            var_dump(count($postArr));
 
-                $wr_featured_primary = get_sub_field('wr_featured_events_primary_feature');
+            if (count($postArr) > 0) {
+                $wr_featured_primary = $postArr[0];
+            }
 
-                $wr_featured_secondary = get_sub_field('wr_featured_events_secondary_feature');
 
-                $wr_featured_tertiary = get_sub_field('wr_featured_events_tertiary_feature');
+            if (count($postArr) > 1) {
+                $wr_featured_secondary = $postArr[1];
+            }
 
-                $wr_featured_quaternary = get_sub_field('wr_featured_events_quaternary_feature');
+            if (count($postArr) > 2) {
+                $wr_featured_tertiary = $postArr[2];
+            }
 
-                $wr_featured_url = get_sub_field('wr_featured_url');
-                ?>
+            if (count($postArr) > 3) {
+                $wr_featured_quaternary = $postArr[3];
+            }
 
-            <?php endwhile; ?>
+            $wr_featured_url = get_sub_field('wr_featured_url');
+
+            ?>
+        <?php endif; ?>
+
+    <?php else : ?>
+
+        <?php if (get_field('wr_featured_type') === 'post') : ?>
+            <?php if (have_rows('wr_featured_posts')) : ?>
+                <?php while (have_rows('wr_featured_posts')) :
+                    the_row(); ?>
+
+                    <?php
+                    $type = 'post';
+                    $display_type = 'blogs';
+
+                    $wr_featured_primary = get_sub_field('wr_featured_posts_primary_feature');
+
+                    $wr_featured_secondary = get_sub_field('wr_featured_posts_secondary_feature');
+
+                    $wr_featured_tertiary = get_sub_field('wr_featured_posts_tertiary_feature');
+
+                    $wr_featured_quaternary = get_sub_field('wr_featured_posts_quaternary_feature');
+
+                    $wr_featured_url = get_sub_field('wr_featured_url');
+                    ?>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+
+        <?php if (get_field('wr_featured_type') === 'events') : ?>
+            <?php if (have_rows('wr_featured_events')) : ?>
+                <?php while (have_rows('wr_featured_events')) :
+                    the_row(); ?>
+
+                    <?php
+                    $type = 'event';
+                    $display_type = 'events';
+
+                    $wr_featured_primary = get_sub_field('wr_featured_events_primary_feature');
+
+                    $wr_featured_secondary = get_sub_field('wr_featured_events_secondary_feature');
+
+                    $wr_featured_tertiary = get_sub_field('wr_featured_events_tertiary_feature');
+
+                    $wr_featured_quaternary = get_sub_field('wr_featured_events_quaternary_feature');
+
+                    $wr_featured_url = get_sub_field('wr_featured_url');
+                    ?>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
         <?php endif; ?>
     <?php endif; ?>
 
@@ -61,7 +141,7 @@ if (get_field('wr_display_featured_block') === 'display') : ?>
         <div class="row">
             <div class="featured__item featured__item--primary col-lg-6 mb-4 row">
                 <?php
-                if ($wr_featured_primary) :
+                if (!empty($wr_featured_primary)) :
                     $primary = $wr_featured_primary;
 
                 ?>
@@ -81,7 +161,7 @@ if (get_field('wr_display_featured_block') === 'display') : ?>
             <div class="col-lg-6">
                 <div class="featured__item featured__secondary mb-4">
                     <?php
-                    if ($wr_featured_secondary) :
+                    if (!empty($wr_featured_secondary)) :
                         $secondary = $wr_featured_secondary;
                     ?>
                         <?php get_template_part('/partials/common/featured', 'card', array($secondary)) ?>
@@ -90,7 +170,7 @@ if (get_field('wr_display_featured_block') === 'display') : ?>
                 <hr>
                 <div class="featured__item featured__tertiary mb-4">
                     <?php
-                    if ($wr_featured_tertiary) :
+                    if (!empty($wr_featured_tertiary)) :
                         $tertiary = $wr_featured_tertiary;
                     ?>
                         <?php get_template_part('./partials/common/featured', 'card', array($tertiary)) ?>
@@ -99,7 +179,7 @@ if (get_field('wr_display_featured_block') === 'display') : ?>
                 <hr>
                 <div class="featured__item featured__quaternary mb-4">
                     <?php
-                    if ($wr_featured_quaternary) :
+                    if (!empty($wr_featured_quaternary)) :
                         $quaternary = $wr_featured_quaternary;
                     ?>
                         <?php get_template_part('./partials/common/featured', 'card', array($quaternary)) ?>
