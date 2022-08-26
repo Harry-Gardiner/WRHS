@@ -17,10 +17,15 @@ get_header();
   <?php
 
   get_template_part('partials/blocks/block', 'hero');
+  echo '<section class="container section-break">';
+  the_content();
+  echo '</section>';
   get_template_part('partials/blocks/block', 'coloured');
   get_template_part('partials/blocks/block', 'featured');
 
   ?>
+
+
 
 </main>
 

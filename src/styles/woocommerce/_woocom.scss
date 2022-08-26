@@ -77,7 +77,7 @@
 
 				.page-numbers:not(.current) {
 					&:hover {
-						border-bottom: 2px solid $primary-green;
+						text-decoration: underline;
 					}
 				}
 			}
