@@ -1,0 +1,12 @@
+.section-break {
+	margin: $gap-md auto;
+	text-align: center;
+	&:before,
+	&:after {
+		display: flex;
+		content: "";
+		border-top: 2px solid $secondary-green;
+		width: 10vw;
+		margin: 0 auto;
+	}
+}
